@@ -4,8 +4,8 @@
 </span>
 
 {{if .Site.Home.Content }} 
-{{.Site.Home.Content}}	
-{{else}}           
+{{.Site.Home.Content}}
+{{else}}
 	{{if eq .Site.Language.Lang "fr"}}
 		<h1>Personaliser la page d'accueil</h1>
 		<p>
@@ -27,5 +27,5 @@
 		  <li><b>3. </b> Configure your server to automatically redirect home page to one your documentation page</li>
 		</ul>
 	{{end}}
-{{ end }}  
+{{ end }}
 {{ partial "footer.html" . }}
