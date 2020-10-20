@@ -1,7 +1,5 @@
-// Get Parameters from some url
 var getUrlParameter = function getUrlParameter(sPageURL) {
     var url = sPageURL.split('?');
-    var obj = {};
     if (url.length == 2) {
       var sURLVariables = url[1].split('&'),
           sParameterName,
@@ -10,8 +8,10 @@ var getUrlParameter = function getUrlParameter(sPageURL) {
           sParameterName = sURLVariables[i].split('=');
           obj[sParameterName[0]] = sParameterName[1];
       }
+      return obj;
+    } else {
+      return undefined;
     }
-    return obj;
 };
 
 // Execute actions on images generated from Markdown pages
